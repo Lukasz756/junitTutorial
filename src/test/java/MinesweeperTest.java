@@ -8,8 +8,10 @@ public class MinesweeperTest {
         int width = 5;
         int height = 5;
         Board board = new Board(width, height);
+        board.setMine(1,0);
         Assertions.assertNotNull(board);
-        Assertions.assertEquals(0,board.getValue(1,0));
+        Assertions.assertEquals('*',board.getValue(1,0));
+        Assertions.assertEquals('.',board.getValue(0,0));
 
     }
 }
